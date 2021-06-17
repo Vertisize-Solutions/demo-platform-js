@@ -12,6 +12,9 @@
 
     <body class="container">
         <h1 class="mt-3">Platform Identification</h1>
+        <p>
+            You are using a <span id="platform-desc"></span>
+        </p>
         <ol>
             <li>
                 OS: <span id="os-name"></span>
@@ -21,10 +24,10 @@
             </li>
         </ol>
         <script>
-            var os = platform.os;
-            document.getElementById('os-name').innerHTML = os;
-            var browser = platform.name + ' ' + platform.version;
+            document.getElementById('os-name').innerHTML = platform.os;
+            const browser = platform.name + ' ' + platform.version;
             document.getElementById('browser-name').innerHTML = browser;
+            document.getElementById('browser-name').innerHTML = platform.description;
         </script>
 
     </body>
