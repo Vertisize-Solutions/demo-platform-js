@@ -22,12 +22,15 @@
             <li>
                 Browser: <span id="browser-name"></span>
             </li>
+            <li>
+                Browser Version: <span id="browser-version"></span>
+            </li>
         </ol>
         <script>
             document.getElementById('os-name').innerHTML = platform.os;
-            const browser = platform.name + ' ' + platform.version;
-            document.getElementById('browser-name').innerHTML = browser;
-            document.getElementById('browser-name').innerHTML = platform.description;
+            document.getElementById('browser-name').innerHTML = platform.name;
+            document.getElementById('browser-version').innerHTML = platform.version;
+            document.getElementById('platform-desc').innerHTML = platform.description;
         </script>
 
     </body>
